@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic info para sa HTML document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainiacs Bonanza</title>
+
+    <!-- Link sa external CSS file para sa styles ng page -->
+    <link rel="stylesheet" href="braincss.css">
+</head>
+<body>
+    <!-- Main homepage para piliin ang mga options sa game -->
+    <div id="homepage">
+        <h1>Brainiacs Bonanza</h1>
+        <button id="startBtn">Start Game</button> <!-- Button para simulan ang game -->
+        <button id="viewRankingBtn">View Ranking</button> <!-- Button para makita ang ranking -->
+        <button id="Exit">Exit Game</button> <!-- Button para mag-exit ng game -->
+    </div>
+
+    <!-- Registration page para mag-register ng players; nakatago initially (display: none) -->
+    <div id="registrationPage" style="display: none;">
+        <h2>Player Registration</h2>
+        
+        <!-- Input para sa bilang ng players -->
+        <label for="playerCount">Select Number of Players (2-5):</label>
+        <input type="number" id="playerCount" min="2" max="5" value="2">
+        
+        <!-- Button para i-confirm ang number ng players -->
+        <button id="confirmPlayerCountBtn">Confirm Player Count</button>
+        
+        <!-- Input para sa pangalan ng player -->
+        <input type="text" id="playerName" placeholder="Enter Player Name" disabled>
+        
+        <!-- Register button; naka-disable initially until may pangalan na -->
+        <button id="registerBtn" disabled>Register</button>
+        
+        <!-- Button para bumalik sa home page -->
+        <button id="returnBtn" class="return-button">Return to Home</button>
+        
+        <!-- Div para ipakita ang list ng registered players -->
+        <div id="registeredPlayers"></div>
+    </div>
+
+    <!-- Ranking page na may table ng mga players at wins; initially hidden -->
+    <div id="rankingPage" style="display: none;">
+        <h2>Player Ranking</h2>
+        <table id="rankingTable">
+            <thead>
+                <tr>
+                    <th>Name</th> <!-- Column para sa pangalan ng player -->
+                    <th>Wins</th> <!-- Column para sa bilang ng wins ng player -->
+                </tr>
+            </thead>
+            <tbody></tbody> <!-- Body ng table; dito papasok dynamically ang ranking data -->
+        </table>
+        
+        <!-- Button para i-reset ang ranking -->
+        <button id="resetRankingBtn">Reset Ranking</button> <!-- Reset Ranking Button -->
+
+        <button id="returnToHomeBtn">Return Home</button> <!-- Button para bumalik sa home page -->
+    </div>
+
+    <!-- Main game container para sa gameplay mismo; initially hidden -->
+    <div id="gameContainer" style="display: none;">
+        <h2 id="roundTitle"></h2> <!-- Title ng round, dynamically set sa JavaScript -->
+        <div id="questionText"></div> <!-- Area para sa question ng bawat round -->
+        <div id="choicesContainer"></div> <!-- Dito lalabas ang choices ng player -->
+        <div id="roundScoresDisplay"></div> <!-- Display ng scores per round -->
+        
+        <!-- Button para mag-next sa susunod na question, initially hidden -->
+        <button id="nextQuestionBtn" style="display: none;">Next Question</button>
+    </div>
+
+    <!-- End game screen na may summary ng game result; initially hidden -->
+    <div id="endGameScreen" style="display: none;">
+        <h2>Game Summary</h2> <!-- Title para sa game summary -->
+        
+        <!-- Display para sa winner ng game -->
+        <div id="winnerDisplay"></div>
+        
+        <!-- Summary ng scores at results ng game -->
+        <div id="summaryDisplay"></div>
+        
+        <!-- Buttons para mag-play ulit, mag-exit, or bumalik sa home page -->
+        <button id="playAgainBtn">Play Again</button>
+        <button id="exitBtn">Exit</button>
+        <button id="returnBtnEnd" class="return-button">Return to Home</button>
+    </div>
+
+    <!-- Link sa JavaScript file para sa logic ng game -->
+    <script src="brainscript.js"></script>
+</body>
+</html>

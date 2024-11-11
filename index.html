@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selection</title>
+
+    <!-- Link sa external CSS file para sa mga style ng page -->
+    <link rel="stylesheet" href="indexcss.css">
+
+    <!-- Inline CSS Styles para sa mga design ng page -->
+    <style>
+        /* Basic settings para sa body ng page */
+        body {
+            font-family: Arial, sans-serif; /* Set ang font style to Arial */
+            display: flex; /* Ginawang flexbox para madali i-center */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Buong height ng page */
+            margin: 0; /* Alisin ang default margin */
+            background-color: #0b0447c0; /* Dark blue background color */
+        }
+
+        /* Container styling - para ma-center lahat ng nasa loob */
+        .container {
+            text-align: center; /* I-center ang text at mga buttons */
+        }
+
+        /* General style para sa lahat ng buttons */
+        .button {
+            display: inline-block; /* Para mag-line up ng maayos */
+            width: 200px; /* Width ng bawat button */
+            height: 200px; /* Height ng bawat button */
+            margin: 20px; /* Space sa paligid ng bawat button */
+            font-size: 18px; /* Text size ng button */
+            font-weight: bold; /* Gawing bold ang text */
+            color: white; /* White text color */
+            background-color: #4CAF50; /* Default na green background */
+            border: none; /* Alisin ang border */
+            cursor: pointer; /* Magiging pointer cursor on hover */
+            transition: transform 0.2s ease; /* Smooth scale effect */
+        }
+
+        /* Style kapag nag-hover o dumaan ang cursor sa button */
+        .button:hover {
+            transform: scale(1.05); /* Slightly larger pag-hovered */
+        }
+
+        /* Iba't ibang color per button para madaling ma-distinguish */
+        .button.monopoly {
+            background-color: #ff6347; /* Red-orange para sa Monopoly button */
+        }
+
+        .button.brainiacs {
+            background-color: #0b1024; /* Dark blue para sa Brainiacs button */
+        }
+
+        .button.coming-soon {
+            background-color: #6e6e6e; /* Grey para sa Coming Soon button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Game</h1>
+        
+        <!-- Buttons para sa iba't ibang games na pwede piliin -->
+        
+        <!-- Monopoly button: May onclick function para mag-redirect sa monopoly.html -->
+        <button class="button monopoly" onclick="window.location.href='monopoly.html'">Monopoly</button>
+
+        <!-- Brainiacs button: May onclick function din para mag-redirect sa brainiacs.html -->
+        <button class="button brainiacs" onclick="window.location.href='brainiacs.html'">Brainiacs Bonanza</button>
+
+        <!-- Coming Soon button: Walang onclick function kasi placeholder pa lang -->
+        <button class="button coming-soon">Coming Soon</button>
+    </div>
+</body>
+</html>

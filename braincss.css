@@ -1,0 +1,75 @@
+/* General styles para sa buong body ng page */
+body {
+    font-family: Arial, sans-serif; /* Default font style */
+    text-align: center; /* Center-align ang text */
+    background-image: url('bg1.jpg'); /* Background image ng page */
+    background-size: cover; /* Para i-cover ng image ang buong background */
+    background-position: center; /* Centered yung background image */
+    display: flex; /* Flex layout para ma-center ang content */
+    justify-content: center; /* Horizontal centering ng content */
+    align-items: center; /* Vertical centering ng content */
+    height: 100vh; /* Full screen height */
+    margin: 0; /* Remove default margin */
+    color: rgb(245, 245, 245); /* White-ish text color */
+}
+
+/* Styling para sa mga buttons */
+button {
+    margin: 10px; /* Space sa paligid ng button */
+    padding: 15px 30px; /* Padding sa loob ng button */
+    font-weight: bold; /* Bold text para sa button */
+    font-size: 18px; /* Font size ng text sa button */
+    color: white; /* White color ng text */
+    background-color: #13194eea; /* Background color ng button */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Rounded corners para sa button */
+    cursor: pointer; /* Pointer cursor kapag hover */
+    transition: background 0.3s; /* Smooth transition ng background color on hover */
+    width: auto; /* Automatic width based on content */
+}
+
+/* Hover effect sa buttons para mag-iba ang background color */
+button:hover {
+    background-color: #0b1024; /* Darker background color pag naka-hover */
+}
+
+/* Styling specific para sa .return-button (button na pang return) */
+.return-button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background-color: #13194ee0; /* Medyo lighter blue background color */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: auto;
+}
+
+/* Hover effect sa return button para mag-darken ang background */
+.return-button:hover {
+  background-color: #0b1024;
+}
+
+/* Styling para sa iba’t ibang sections na lalabas like gameContainer, endGameScreen, registrationPage, and rankingPage */
+#gameContainer, #endGameScreen, #registrationPage, #rankingPage {
+    background: rgba(0, 45, 112, 0.733); /* Semi-transparent dark blue background */
+    padding: 40px; /* Space sa loob ng container */
+    border-radius: 20px; /* Rounded corners ng container */
+}
+
+/* Style para sa question text na nagpapakita sa game */
+#questionText {
+    font-size: 25px; /* Medyo malaking font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space sa baba ng question */
+}
+
+/* Styling ng buttons sa loob ng #choicesContainer para sa mga choices ng player */
+#choicesContainer button {
+    display: block; /* Block display para naka-center */
+    margin: 15px auto; /* Space sa top/bottom at center horizontally */
+    width: 200px; /* Fixed width para consistent ang size ng buttons */
+}

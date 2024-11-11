@@ -1,0 +1,82 @@
+/* Styles specific sa index.html */
+
+body {
+    margin: 0; /* Tanggal ang default margin ng page */
+    padding: 0; /* Tanggal ang default padding ng page */
+    font-family: 'Helvetica Neue', sans-serif; /* Default font style */
+    background-image: url('index.jpg'); /* Background image ng page */
+    background-size: cover; /* Full cover ng image sa buong screen */
+    background-position: center; /* Centered ang image sa background */
+    height: 100vh; /* Full screen height */
+    display: flex; /* Flex layout for easier centering */
+    align-items: center; /* Vertical centering ng content */
+    justify-content: center; /* Horizontal centering ng content */
+    color: white; /* White color para sa text */
+}
+
+#container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 50px; /* Inner padding para sa loob ng container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Shadow effect sa ilalim */
+    text-align: center; /* Center-align text sa loob */
+    max-width: 800px; /* Max width ng container */
+    width: 100%; /* Full width ng container, but will respect max-width */
+}
+
+h1 {
+    font-size: 4em; /* Large font size para sa heading */
+    font-weight: bold; /* Bold ang font */
+    letter-spacing: 5px; /* Spacing sa pagitan ng mga letters */
+    text-transform: uppercase; /* Uppercase lahat ng text */
+    margin-bottom: 20px; /* Space sa ilalim ng heading */
+    color: #000000; /* Black ang text color */
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation para sa heading */
+}
+
+p {
+    font-size: 1.5em; /* Larger font size para sa paragraph */
+    line-height: 1.6; /* Spacing sa pagitan ng lines ng text */
+    margin-bottom: 40px; /* Space sa ilalim ng paragraph */
+    color: #ddd; /* Light gray text color */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation para sa paragraph */
+}
+
+#callToAction {
+    display: flex; /* Flex layout for button alignment */
+    justify-content: center; /* Center-align ng buttons */
+    gap: 20px; /* Space sa pagitan ng buttons */
+}
+
+button {
+    background-color: #28a745; /* Green background color para sa button */
+    color: white; /* White color ng text */
+    padding: 15px 30px; /* Padding sa loob ng button */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners sa button */
+    font-size: 1.2em; /* Slightly larger font size */
+    cursor: pointer; /* Pointer cursor kapag naka-hover */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition ng transform at background color on hover */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation para sa button */
+}
+
+button:hover {
+    background-color: #218838; /* Darker shade ng green pag naka-hover */
+    transform: scale(1.1); /* Slightly larger button on hover */
+}
+
+footer {
+    margin-top: 40px; /* Space sa taas ng footer */
+    font-size: 0.9em; /* Smaller font size para sa footer */
+    color: #bbb; /* Light gray color ng footer text */
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation para sa footer */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starting point ng animation - invisible */
+    }
+    to {
+        opacity: 1; /* End point ng animation - fully visible */
+    }
+}
