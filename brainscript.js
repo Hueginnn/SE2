@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const returnBtn = document.getElementById('returnBtn');
     const returnBtnEnd = document.getElementById('returnBtnEnd');
     const playAgainBtn = document.getElementById('playAgainBtn');
-    const resetRankingBtn = document.getElementById('resetRankingBtn'); // Add reset ranking button
-
+    const resetRankingBtn = document.getElementById('resetRankingBtn'); 
     let players = JSON.parse(localStorage.getItem('players')) || [];
     let maxPlayers = 2;
     let currentPlayerIndex = 0;
@@ -82,11 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
     registerBtn.addEventListener('click', () => {
         const playerName = playerNameInput.value.trim();
         if (playerName && players.length < maxPlayers) {
-            players.push({ name: playerName, wins: 0 });
-            updateRegisteredPlayers();
-            playerNameInput.value = '';
-            if (players.length === maxPlayers) {
-                startGame();
+            // Check if the player name already exists
+            const existingPlayer = players.find(player => player.name.toLowerCase() === playerName.toLowerCase());
+            if (existingPlayer) {
+                alert('This player name is already taken. Please choose another one.');
+            } else {
+                players.push({ name: playerName, wins: 0 });
+                updateRegisteredPlayers();
+                playerNameInput.value = '';
+
+                // Save initial players to localStorage once registration is complete
+                if (players.length === maxPlayers) {
+                    localStorage.setItem('initialPlayers', JSON.stringify(players));
+                    startGame();
+                }
             }
         } else if (players.length >= maxPlayers) {
             alert(`You have reached the maximum of ${maxPlayers} players.`);
